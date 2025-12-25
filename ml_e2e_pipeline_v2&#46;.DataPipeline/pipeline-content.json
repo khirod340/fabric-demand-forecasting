@@ -4,8 +4,8 @@
       {
         "type": "TridentNotebook",
         "typeProperties": {
-          "notebookId": "f6401d12-185f-418c-80a7-3d5187ca2b97",
-          "workspaceId": "30ba803b-3d2f-4d3c-8816-9fceb2041c9d"
+          "notebookId": "1416089b-4ab5-8529-4da3-abc345877e86",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
         },
         "policy": {
           "timeout": "0.12:00:00",
@@ -103,29 +103,6 @@
         "dependsOn": [
           {
             "activity": "03_Model_Training",
-            "dependencyConditions": [
-              "Succeeded"
-            ]
-          }
-        ]
-      },
-      {
-        "type": "TridentNotebook",
-        "typeProperties": {
-          "notebookId": "9b822088-516a-b7b9-4ef4-14c79bd34e91",
-          "workspaceId": "00000000-0000-0000-0000-000000000000"
-        },
-        "policy": {
-          "timeout": "0.12:00:00",
-          "retry": 0,
-          "retryIntervalInSeconds": 30,
-          "secureInput": false,
-          "secureOutput": false
-        },
-        "name": "05_MLflow_Analysis",
-        "dependsOn": [
-          {
-            "activity": "04_Batch_Forecast",
             "dependencyConditions": [
               "Succeeded"
             ]
